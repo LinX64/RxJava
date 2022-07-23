@@ -4,14 +4,13 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.client.rxjavamovies.data.api.model.Movie
-import com.client.rxjavamovies.data.api.model.MovieList
-import com.client.rxjavamovies.databinding.LayoutRvItemBinding
+import com.client.rxjavamovies.databinding.ListViewItemBinding
 
 class MainAdapter : RecyclerView.Adapter<MainAdapter.MyViewHolder>() {
     private var movies = mutableListOf<Movie>()
 
     inner class MyViewHolder(
-        private val binding: LayoutRvItemBinding
+        private val binding: ListViewItemBinding
     ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(myMovies: Movie) {
             binding.myMovies = myMovies
@@ -21,7 +20,7 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.MyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val itemBinding =
-            LayoutRvItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            ListViewItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return MyViewHolder(itemBinding)
     }
 

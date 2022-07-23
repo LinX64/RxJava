@@ -10,6 +10,10 @@ object BindingAdapterUtil {
     @BindingAdapter("loadImage")
     @JvmStatic
     fun ImageView.loadImageFromUrl(url: String) {
-        Glide.with(this.context).load(url).into(this)
+        Glide
+            .with(this.context)
+            .load(url)
+            .placeholder(R.drawable.baseline_cloud_queue_grey_700_24dp)
+            .into(this)
     }
 }
