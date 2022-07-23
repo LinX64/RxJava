@@ -1,5 +1,5 @@
-# RxJava
-A sample of using RxJava/Kotlin along with Retrofit and Data Binding with an MVVM design pattern.
+# RxJava/Kotlin
+A sample project for using RxJava/Kotlin along with Retrofit, DataBinding, and Hilt for Dependency Injection with an MVVM design pattern.
 
 
 ### Room for improvement
